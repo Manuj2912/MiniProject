@@ -1,0 +1,173 @@
+<html>
+<head> 
+    <style type="text/css">
+        #logoTitle{
+            height:200px;
+             background:url("rupeee.jpe");
+background-size:85px 60px;
+background-repeat:repeat;  
+padding-top:40px; 
+              background-color: antiquewhite;
+            text-align: center;
+        vertical-align: middle;
+        line-height: 0px;
+            font-size: 50px;
+        }
+       
+     #redirection{
+            height:30px;
+        background-color: blue;
+        margin-top: 10px;
+            height:30px;
+        
+        }
+        button{
+            height:30px;
+            width:14%;
+        }
+        #Sign_IN{
+             
+            height: 200px;
+            width: 360px;
+            margin-top:60px;
+            float:left;
+        }
+        #container{
+            border:2px solid blue;
+            height:180px;
+            margin-top:12px;
+            float:right;
+            width:900px;
+            position: relative;
+        }
+        
+        #container>img{
+    position:absolute;
+    width:100%;
+    height:100%;
+}
+#container>.btn{
+    position:absolute;
+    width:50px;
+    height:50px;
+    top:70px;
+    border-radius: 25px;
+    background: black;
+    color:white;
+    font-size:20px;
+    
+}
+#container>#btn2{
+     position: relative;
+float:right;
+   
+}
+         #Text{
+            float:right;
+            border:2px solid blue;
+            height:180px;
+        float:right;
+            width:900px;
+        }
+        .form{
+            
+            position:relative;
+            z-index: 1;
+            
+            text-align: center;
+            height:100%;
+            
+            
+        }
+       
+        
+      
+    </style>
+     <script type="text/javascript">
+     
+var index=1;
+    function plusIndex(n){
+        index=index+1;
+        showSlides(index);
+        
+    }
+     showSlides(1);
+    function showSlides(n){
+        var i;
+        var x =document.getElementsByClassName("slide");
+        if(n>x.length){index=1;}
+        if(n<x.length){index=x.length;}
+        for(i=0;i<x.length;i++){
+         x[i].style.display="none";   
+            
+        }
+       x[index-1].style.display="block"; 
+    }
+
+
+</script>
+       
+    
+    </head>
+    <body background="yellow.jpeg" >
+    
+    <div id="logoTitle">
+         <h1 style="text-shadow: 10px 10px 6px blue; ">MY BANK</h1>  
+    </div>
+       
+        <div id="redirection">
+        <button type="button">HOME</button>
+        
+  <a href="register.jsp"><button type="submit" formaction="/register.jsp" formmethod="post" name="registerLogin" value="I'am the new user.">NEW ACCOUNT</button></a>
+        
+            <a href="Balance.jsp"><button type="button">BALANCE</button></a>
+            <a href="Deposit.jsp"><button type="button">DEPOSIT</button></a>
+            <a href="Withdraw.jsp"><button type="button">WITHDRAW</button></a>
+           <a href="transfer.jsp"> <button type="button">TRANSFER</button></a>
+          <a href="close.jsp">  <button type="button">CLOSE A/C</button></a>
+            </div>
+        <div id="Sign_In">
+          <div class="form">   
+            <form action="dashboard.jsp" method="post">
+              <input type="text" name="emailLogin" placeholder="USER NAME" style="width:220px;height:40px;"/><br><br>
+                <input type="password" name="passLogin" placeholder="PASSWORD" style="width:220px;height:40px;"/><br><br>
+              <button  name="login" value="Login"  style="width:80px;height:40px;float:left; margin-left:80px;">SIGN IN</button>
+      </form>
+      <form action=logOut.jsp method="post">
+            
+            <input type="submit" name="logout" value="LOG OUT" style="width:80px;height:40px;float:right;margin-right:80px;margin-top:-14px;"/>
+            
+            </form>  
+            </div>
+           
+       </div>
+       
+        <div id="container">
+             <img src="logo.jpeg" class="slide"/>
+            <img src="UBI_Banners.jpg" class="slide"/>
+          <button class="btn" onclick="plusIndex(-1)" id="btn1">&#10094;</button>
+          <button class="btn" onclick="plusIndex(1)" id="btn2">&#10095;</button>
+          
+            
+            </div>
+        <div id="Text">
+            <pre id="Paragraph">
+ My Bank of India is one of the largest government-owned banks of India.All the bank's branches have been networked
+ with its 6909 ATMs as on 30 September 2015.My Bank of India is one of the premier banks in India with a vision of
+ becoming the largest in domestic operations. Apart from having a pan India network, the bank also has overseas  
+ presence. It is one of the most techno savvy banks and was the first major Public Sector Bank to extend Core   
+ Banking Solution to all its branches. The professional growth of each and every member of the Union Bank family 
+ is of utmost concern to us.The Bank has a robust and progressive HR Policy and has adopted a transparent, 
+ objective and credible Performance Management System, which is integrated with Career Progression and 
+ training needs.The Promotion Policy of the Bank is also geared towards a speedy career growth.
+ </pre>
+        </div>
+        
+    
+        
+    
+    </body>
+
+
+
+</html>
